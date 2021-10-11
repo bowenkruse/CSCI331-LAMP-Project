@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$clubstr = 'Csci-491 Demo Lamp Stack Site';
+$clubstr = 'Bowen Kruse\'s CSCI 331 LAMP prototype';
 $userstr = 'Welcome Guest';
 
 echo <<<_INIT
@@ -60,7 +60,7 @@ _GUEST;
 echo <<<_HEADER_CLOSE
 
         </header>
-        <div class='username'>$userstr</div>
+<!--        <div class='username'>$userstr</div>-->
         <div id="content">
 _HEADER_CLOSE;
 

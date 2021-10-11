@@ -16,25 +16,24 @@ font-family: 'Playfair Display', serif;
 
 html {
     font-size: 16px;
-    font-family: 'Arsenal', sans-serif;
-    color: #222;
-    background-color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #260101;
+    background-color: #BF5A5A;
 }
 
 #wrapper {
-    /*margin: auto;*/
     border-color: #222;
-    /*padding: 0 5px;*!*/
+    padding: 0;
 }
 
 header {
-    background-color: crimson;
-    height: 140px;
+    background-color: #8C3E3E;
+    height: 160px;
     position: relative;
 }
 
 #logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Helvetica Neue', serif;
     padding: 20px 0;
     width: 200px;
     margin: 0 40px;
@@ -49,11 +48,11 @@ header {
 nav {
     position: absolute;
     width: 100%;
-    bottom: 0;
+    /*bottom: 0;*/
 }
 
 nav ul {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     list-style-type: none;
     overflow: hidden;
     color: #ddd;
@@ -80,13 +79,14 @@ nav li a:hover {
 
 #content {
     min-height: 200px;
-    padding: 0 50px;
-    background-color: white;
-    padding-bottom: 80px;
+
+    background-color: #A66832;
+
 }
 
 .username {
-    font-family: 'Lora', serif;
+    font-family: 'Helvetica Neue', serif;
+    background-color: #A66832;
     font-size: 1.2em;
     font-style: italic;
     text-align: right;
@@ -114,7 +114,7 @@ textarea {
 }
 
 footer {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     padding: 20px;
     color: #ddd;
     background-color: #222;

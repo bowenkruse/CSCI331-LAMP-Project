@@ -16,7 +16,7 @@ if (isset($_GET['view'])) {
 
     echo "<h3>$name Profile</h3>";
     showProfile($view);
-    echo "<a href='messages.php?view=$view'>View $name messages</a>";
+    echo "<a href='messages.php?view=$view' class='userlink'>View $name messages</a>";
     die(require 'footer.php');
 }
 
@@ -35,7 +35,7 @@ elseif (isset($_GET['remove'])) {
 $result = queryMysql("SELECT user FROM members ORDER BY user");
 $num    = $result->num_rows;
 
-echo "<h3>Members: $clubstr</h3><ul>";
+echo "<h3>Members:</h3><ul>";
 
 for ($j = 0 ; $j < $num ; ++$j) {
     $row = $result->fetch_array(MYSQLI_ASSOC);
@@ -43,7 +43,7 @@ for ($j = 0 ; $j < $num ; ++$j) {
         continue;
 
     echo "<li><a data-transition='slide' href='members.php?view=" .
-    $row['user'] . "'>" . $row['user'] . "</a>";
+    $row['user'] . "' class='userlink'>" . $row['user'] . "</a>";
     $follow = "follow";
 
     $result1 = queryMysql("SELECT * FROM friends WHERE user='" . $row['user'] . "' AND friend='$user'");
@@ -61,9 +61,9 @@ for ($j = 0 ; $j < $num ; ++$j) {
     }
 
     if (!$t1) 
-        echo " [<a href='members.php?add=" . $row['user'] . "'>$follow</a>]";
+        echo " [<a href='members.php?add=" . $row['user'] . " ' class='userlink'>$follow</a>]";
     else
-        echo " [<a href='members.php?remove=" . $row['user'] . "'>drop</a>]";
+        echo " [<a href='members.php?remove=" . $row['user'] . "' class='userlink'>drop</a>]";
 }
 echo "</ul>";
 require_once 'footer.php';

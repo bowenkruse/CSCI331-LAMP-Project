@@ -7,7 +7,7 @@ Optima - Arsenal
 Garmond - Lora
 Playfair Display - Bodini
 
-font-family: 'Muli', sans-serif;
+ont-family: 'Muli', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Arsenal', sans-serif;
 font-family: 'Lora', serif;
@@ -16,28 +16,26 @@ font-family: 'Playfair Display', serif;
 
 html {
     font-size: 16px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: #260101;
-    background-color: #BF5A5A;
+    background-color: #2f2fa2;
 }
 
 #wrapper {
-    border-color: #222;
     padding: 0;
-}
 
+}
 header {
-    background-color: #8C3E3E;
-    height: 160px;
-    position: relative;
+    background-color: #f64c72;
+    width: 100%;
+    font-family: inherit;
+    margin-bottom: 100px;
 }
 
 #logo {
-    font-family: 'Helvetica Neue', serif;
     padding: 20px 0;
     width: 200px;
-    margin: 0 40px;
-    font-variant: small-caps;
+    /*margin: 0 40px;*/
     letter-spacing: .05em;
     font-size: 1.5em;
     text-align: center;
@@ -46,17 +44,17 @@ header {
 }
 
 nav {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 100%;
     /*bottom: 0;*/
 }
 
 nav ul {
-    font-family: 'Helvetica Neue', sans-serif;
     list-style-type: none;
     overflow: hidden;
     color: #ddd;
-    background-color: #222;
+    background-color: #f64c72;
     margin: 0;
     padding: 0;
 }
@@ -66,6 +64,7 @@ nav li {
 }
 
 nav li a {
+    font-size: 26px;
     display: block;
     color: white;
     text-align: center;
@@ -78,18 +77,39 @@ nav li a:hover {
 }
 
 #content {
-    min-height: 200px;
-
-    background-color: #A66832;
-
+    min-height: 100px;
+    color: whitesmoke;
 }
 
+#signupbotton {
+    font-size: 24px;
+    font-family: inherit;
+    padding: 5px;
+    margin: 20px;
+    background-color: #99738e;
+    display:inline-block;
+    border-radius: 4px;
+    border-color: #f64c72;
+    color: whitesmoke;
+}
+
+#login {
+    text-align: center;
+    margin-top: 200px;
+}
+
+#upload {
+    text-align: center;
+    margin-top: 100px;
+}
 .username {
-    font-family: 'Helvetica Neue', serif;
-    background-color: #A66832;
+    font-family: inherit;
     font-size: 1.2em;
-    font-style: italic;
-    text-align: right;
+    color: white;
+    box-shadow: #2f2fa2;
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 30px;
     padding-right: 5px;
 }
 
@@ -105,8 +125,18 @@ nav li a:hover {
     margin: 0 40px 20px 0;
 }
 
+.userlink {
+    font-family: inherit;
+    font-size: 1.2em;
+    color: white;
+    box-shadow: #2f2fa2;
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-right: 5px;
+}
 textarea {
-    width: 95%;
+    width: 100%;
     color: #777;
     font-size: 1em;
     padding: 1em;
@@ -114,13 +144,101 @@ textarea {
 }
 
 footer {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: inherit;
     padding: 20px;
     color: #ddd;
-    background-color: #222;
+    background-color: #553d67;
+    margin-top: 30px;
     font-size: .9em;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
 footer a {
     color: white;
+}
+
+.button-continue {
+    align-items: center;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #f64c72;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0;
+    overflow: hidden;
+    margin-top: 50px;
+    padding: 0 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.button-continue:hover,
+.button-continue:focus {
+    background-color: #16437E;
+    color: #ffffff;
+}
+
+.button-continue:active {
+    background: #09223b;
+    color: rgb(255, 255, 255);
+}
+
+.button-continue:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+.column {
+    float: left;
+    width: 43%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-top: 60px;
+    bottom: 30%;
+}
+
+#drop_file_zone {
+    left: 50%;
+    background-color: #f64c72;
+    border: whitesmoke 5px dashed;
+    width: 290px;
+    height: 200px;
+    padding: 8px;
+    font-size: 18px;
+}
+#drag_upload_file {
+    width:50%;
+    margin:0 auto;
+}
+#drag_upload_file p {
+    text-align: center;
+}
+#drag_upload_file #selectfile {
+    display: none;
 }

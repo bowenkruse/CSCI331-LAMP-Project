@@ -50,6 +50,22 @@ function showProfile($user) {
         $row = $result->fetch_array(MYSQLI_ASSOC);
         echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
     }
-    else echo "<p>Nothing to see here, yet</p><br>";
+    else echo "<p>Nothing to see here, go add some content to your profile!</p><br>";
+}
+
+function showFiles() {
+    $directory = "vaultfiles/";
+
+    // Open a directory, and read its contents
+    if (is_dir($directory)){
+        if ($opendirectory = opendir($directory)){
+            while (($file = readdir($opendirectory)) !== false){
+                if ($file != '.' && $file != '..') {
+                    echo "<a href='vaultfiles/$file' class='userlink'>$file</a><br/>";
+                }
+            }
+            closedir($opendirectory);
+        }
+    }
 }
 ?>

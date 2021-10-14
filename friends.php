@@ -57,7 +57,7 @@ if (sizeof($mutual)) {
 if (sizeof($followers)) {
     echo "<h3>$name2 followers</h3><ul>";
     foreach($followers as $friend)
-    echo "<li><a href='members.php?view=$friend'>$friend</a>";
+    echo "<li><a href='members.php?view=$friend' class='userlink'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
 }
@@ -65,7 +65,7 @@ if (sizeof($followers)) {
 if (sizeof($following)) {
     echo "<h3>$name3 following</h3><ul>";
     foreach($following as $friend)
-        echo "<li><a href='members.php?view=$friend'>$friend</a>";
+        echo "<li><a href='members.php?view=$friend' class='userlink'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
 }

@@ -17,13 +17,14 @@ if (isset($_POST['user'])) {
         else {
             $_SESSION['user'] = $user;
             $_SESSION['pass'] = $pass;
-            die("<h3>Welcome back, $user.</h3><p>Please <a href='members.php?view=$user'>click here</a> to continue.</p></div><footer></footer></body></html>");
+            die("<h3 style='text-align: center;' >Welcome back, $user.</h3><button class='button-continue' role='button'><a href='members.php?view=$user' style='color: whitesmoke'>Continue</a></button></div><footer></footer></body></html>");
+
         }
     }
 }
 
 echo <<<_END
-
+<div id="login">
     <form method='post' action='login.php'>
         <div data-role='fieldcontain'>
             <label></label>
@@ -43,9 +44,10 @@ echo <<<_END
         </div>
         <div data-role='fieldcontain'>
             <label></label>
-            <input data-transition='slide' type='submit' value='Login'>
+            <input data-transition='slide' type='submit' value='Log me in!' id="signupbotton">
         </div>
     </form>
+</div>
 _END;
 require_once 'footer.php';
 ?>

@@ -54,17 +54,13 @@ function showProfile($user) {
 }
 
 function showFiles() {
-    $directory = "vaultfiles/";
+    $fileList = glob('vaultfiles/*');
+    foreach($fileList as $filename){
+        if(is_file($filename)){
+            echo "<div class='row'>";
+            echo "<img src='$filename' alt='a' width = '250' height = '250'>";
+            echo "</div>";
 
-    // Open a directory, and read its contents
-    if (is_dir($directory)){
-        if ($opendirectory = opendir($directory)){
-            while (($file = readdir($opendirectory)) !== false){
-                if ($file != '.' && $file != '..') {
-                    echo "<a href='vaultfiles/$file' class='userlink'>$file</a><br/>";
-                }
-            }
-            closedir($opendirectory);
         }
     }
 }

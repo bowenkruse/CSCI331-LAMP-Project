@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$clubstr = 'Bowen Kruse\'s CSCI 331 LAMP prototype';
+$clubstr = 'Bowen Kruse\'s LAMP Online Arcade';
 $userstr = 'Welcome!';
 
 echo <<<_INIT
@@ -16,6 +16,7 @@ echo <<<_INIT
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='css/styles.css'>
+
         <title>$clubstr: $userstr</title>
         </head>
 _INIT;
@@ -46,6 +47,16 @@ echo <<<_LOGGEDIN
                 <li><a href='messages.php'>Messages</a></li>
                 <li><a href='profile.php'>Edit Profile</a></li>
                 <li><a href='vault.php'>File Vault</a></li>
+                <div class="dropdown">
+                <li>
+                <a href=''>Games</a>
+                <div class="dropdown-content">
+                <a href="game1.php">Pac-Man</a>
+                <a href="game2.php">Frogger</a>
+                <a href="game3.php">Connect 4</a>
+                </div>
+                </li>
+                </div>
                 <li><a href='logout.php'>Log out</a></li>
                 
             </ul></nav>

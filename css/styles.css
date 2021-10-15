@@ -19,8 +19,13 @@ html {
     font-family: 'Dosis', sans-serif;
     color: #260101;
     background-color: #2f2fa2;
+    z-index:1000;
 }
-
+body {
+    min-height: 400px;
+    margin-bottom: 150px;
+    z-index:100;
+}
 #wrapper {
     padding: 0;
 
@@ -77,6 +82,7 @@ nav li a:hover {
 }
 
 #content {
+    z-index:1000;
     min-height: 100px;
     color: whitesmoke;
 }
@@ -102,6 +108,8 @@ nav li a:hover {
     text-align: center;
     margin-top: 100px;
 }
+
+
 .username {
     font-family: inherit;
     font-size: 1.2em;
@@ -148,17 +156,24 @@ footer {
     padding: 20px;
     color: #ddd;
     background-color: #553d67;
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: .9em;
     bottom: 0;
     position: fixed;
     width: 100%;
+    max-height: 100px;
 }
 
 footer a {
     color: white;
 }
 
+.upload-header {
+    border-color: #f64c72;
+    background-color: #f64c72;
+    border-radius: 100px;
+    padding: 5px;
+}
 .button-continue {
     align-items: center;
     left: 50%;
@@ -191,6 +206,9 @@ footer a {
     vertical-align: middle;
 }
 
+.center-screen {
+    margin-left: 20%;
+}
 .button-continue:hover,
 .button-continue:focus {
     background-color: #16437E;
@@ -212,6 +230,7 @@ footer a {
     float: left;
     width: 43%;
     padding: 5px;
+    margin: 20px;
 }
 
 /* Clear floats after image containers */
@@ -223,22 +242,120 @@ footer a {
     bottom: 30%;
 }
 
-#drop_file_zone {
-    left: 50%;
+
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 26px;
+    font-family: inherit;
+    display: block;
+    color: white;
     background-color: #f64c72;
-    border: whitesmoke 5px dashed;
-    width: 290px;
-    height: 200px;
-    padding: 8px;
-    font-size: 18px;
-}
-#drag_upload_file {
-    width:50%;
-    margin:0 auto;
-}
-#drag_upload_file p {
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-#drag_upload_file #selectfile {
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: crimson;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 320px;
+    min-height: 80px;
+    margin-bottom: 300px;
+    margin-top: 20px;
+    margin-left: 150px;
+    perspective: 1000px;
+    bottom: 30%;
+}
+
+.image-area {
+    position: absolute;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 40s steps(1000, end) infinite;
+
+}
+
+.single-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.single-image img {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;
+
+}
+
+.single-image.image-1 {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.single-image.image-2 {
+    transform: rotateY(60deg) translateZ(300px);
+}
+
+.single-image.image-3 {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+.single-image.image-4 {
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+.single-image.image-5 {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+.single-image.image-6 {
+    transform: rotateY(300deg) translateZ(300px);
+}
+
+@keyframes animate {
+    from {
+        transform: rotateY(-360deg);
+    } to {
+    transform: rotateY(0deg);
+          }
+
 }

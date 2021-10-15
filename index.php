@@ -14,17 +14,30 @@ echo "<div class='row'>";
 
 echo "<div class='column'>";
 echo "<p></p>";
-echo "<h3 style='border-color: #f64c72; border-style: solid'>Create unique profiles!</h3>";
+echo "<h3 class='upload-header'>Create unique profiles!</h3>";
 echo "<img src = 'img/Screen%20Shot%202021-10-13%20at%209.15.37%20PM.png' alt='Profile preview' style='width: 100%'>";
 echo "</div>";
 
 echo "<div class='column'>";
-echo "<h3 style='border-color: #f64c72; border-style: solid'>Message friends</h3>";
+echo "<h3 class='upload-header'>Message friends</h3>";
 echo "<img src = 'img/messages.png' alt='Profile preview' style='width: 100%'>";
 echo "</div>";
 
 echo "</div>";
 
+echo "<div class='row'>";
+
+echo "<div class='column'>";
+echo "<h3 class='upload-header'>Post images for everyone to see!</h3>";
+echo "<img src = 'img/vault.png' alt='Profile preview' style='width: 100%'>";
+echo "</div>";
+
+echo "<div class='column'>";
+echo "<h3 class='upload-header'>Most importantly play games in the arcade</h3>";
+echo "<img src = 'img/game.png' alt='Profile preview' style='width: 400px'>";
+echo "</div>";
+
+echo "</div>";
 echo <<<_END
     </div><br>
 _END;

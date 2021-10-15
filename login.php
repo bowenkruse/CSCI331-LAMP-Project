@@ -44,7 +44,7 @@ echo <<<_END
         </div>
         <div data-role='fieldcontain'>
             <label></label>
-            <input data-transition='slide' type='submit' value='Log me in!' id="signupbotton">
+            <input data-transition='slide' type='submit' value='Log me in!' class="button-continue">
         </div>
     </form>
 </div>

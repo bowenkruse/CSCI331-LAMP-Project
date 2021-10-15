@@ -31,7 +31,7 @@ echo <<<_END
 <div class="row">
     <div class="column" id="upload">
         <form method="post" action="vault.php" enctype="multipart/form-data">
-            <h3 style='border-color: #f64c72; border-style: solid'>Upload a new file</h3>
+            <h3 class="upload-header">Upload a new file</h3>
             <input type='file' name='image'/>
             <input type='submit' value='Upload selected file'/>
         </form>
@@ -39,9 +39,38 @@ echo <<<_END
     </div>
 
     <div class="column" id="upload">
-        <h3 style='border-color: #f64c72; border-style: solid'>Community Files</h3>
+        <h3 class="upload-header">Community Files (Uploaded images may not appear immediately)</h3>
+        <div class="carousel-wrapper">
+        <div class="image-area">
+            <div class="single-image image-1">
+                <img src="vaultfiles/chewbacca-solo-a-star-wars-story-age-1100459-1280x0-1544456080.jpeg" alt="">
+            </div>
+
+            <div class="single-image image-2">
+                <img src="vaultfiles/Darth-Vader_6bda9114.jpeg" alt="">
+            </div>
+
+            <div class="single-image image-3">
+                <img src="vaultfiles/Hansoloprofile.jpeg" alt="">
+            </div>
+
+            <div class="single-image image-4">
+                <img src="vaultfiles/Obi-Wan-Kenobi.jpeg" alt="">
+            </div>
+
+            <div class="single-image image-5">
+                <img src="vaultfiles/Yoda_Empire_Strikes_Back.png" alt="">
+            </div>
+
+            <div class="single-image image-6">
+                <img src="vaultfiles/profilelinkedin.jpeg" alt="">
+            </div>
+
+        </div>
+    </div>
 _END;
-showFiles();
+
+
 echo '</div></div>';
 
 
